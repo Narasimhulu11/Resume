@@ -1,0 +1,151 @@
+/* Basic Reset and Typography */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* Header/Hero Section */
+#hero {
+    background: #007BFF; /* Primary blue for professional look */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+#hero h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-info a, .contact-info span {
+    color: #c9e6ff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* General Sections */
+.section {
+    padding: 40px 0;
+}
+
+.bg-light {
+    background-color: #e9ecef;
+}
+
+/* Technical Expertise Section */
+#expertise h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007BFF;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-grid div {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-grid h4 {
+    color: #0056b3;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Career Highlights Section */
+.project-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #007BFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h4 {
+    color: #333;
+}
+
+.technologies {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #28a745; /* Success green for call-to-action */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: #218838;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    #hero h2 {
+        font-size: 1.2em;
+    }
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+}
