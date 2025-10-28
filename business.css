@@ -1,0 +1,137 @@
+/* Business landing specific styles - complements existing style.css */
+body.business {
+    background: linear-gradient(180deg, #f7fafc 0%, #f4f7fb 100%);
+    color: #24313a;
+}
+
+/* Enhanced header animations */
+.text-gradient {
+    background: linear-gradient(135deg, #00A699 0%, #005A87 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.split-text {
+    --stagger: 0s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: splitReveal 0.8s cubic-bezier(.2,.9,.2,1) forwards;
+    animation-delay: var(--stagger);
+}
+
+@keyframes splitReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.role-tag {
+    display: inline-block;
+    background: rgba(0,166,153,0.15);
+    color: #00A699;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0 6px;
+    backdrop-filter: blur(4px);
+}
+
+.highlight-text {
+    color: #00A699;
+    font-weight: 600;
+}
+
+.biz-hero {
+    background: linear-gradient(135deg, #072f4b 0%, #0a3d5e 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+.biz-hero h1 { font-size: 2.6em; margin-bottom: 5px; }
+.biz-hero p.lead { color: #bfeaf0; font-size: 1.15em; margin-bottom: 20px; }
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.value-card{
+    background: #fff;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(10,30,45,0.06);
+    border-left: 4px solid #00A699;
+}
+.value-card h4{ margin:6px 0 10px; color: #072f4b; }
+.value-card p{ margin:0; color:#46585f }
+
+.case-cards { display: grid; grid-template-columns: 1fr; gap:18px; }
+.case { background: linear-gradient(180deg,#0f3b57,#123e5a); color:#fff; padding:18px; border-radius:8px; }
+.case .company{ color:#cfeff2; font-weight:600; display:block; margin-bottom:8px; }
+.case p{ color:#eaf8fa; margin:0 0 8px }
+.case .impact { font-weight:700; color:#ffd88a }
+
+.why { display:flex; gap:25px; align-items:flex-start; }
+.why ul{ margin:0; padding-left:18px }
+
+.contact-cta{ text-align:center; padding:40px 0; }
+.contact-cta a{ background:#00A699; color:#072f4b; padding:14px 30px; border-radius:8px; font-weight:700; text-decoration:none }
+
+@media (max-width:900px){ .why{flex-direction:column} }
+
+/* Download button for PDF */
+.download-btn{
+    display:inline-block;
+    background:#072f4b;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    margin-left:12px;
+}
+.download-btn:hover{ background:#0a4662 }
+
+/* PDF preview styling */
+.pdf-preview{ margin:22px 0; background:#fff; padding:12px; border-radius:8px; box-shadow:0 6px 18px rgba(10,30,45,0.06); }
+.pdf-preview object, .pdf-preview iframe{ width:100%; height:420px; border:0; }
+
+/* Reveal on-scroll animation */
+.reveal{
+    --delay: 0s;
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+    transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+    transition-delay: var(--delay);
+    will-change: opacity, transform;
+}
+.reveal.visible{
+    opacity: 1;
+    transform: none;
+}
+
+/* CTA pulse effect */
+.pulse{
+    animation: pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse{
+    0% { box-shadow: 0 0 0 0 rgba(0,166,153,0.08); }
+    50% { box-shadow: 0 8px 30px 8px rgba(0,166,153,0.06); }
+    100% { box-shadow: 0 0 0 0 rgba(0,166,153,0); }
+}
+
+/* Small transform for hover on cards */
+.value-card:hover, .case:hover{
+    transform: translateY(-6px);
+    transition: transform 220ms ease;
+}
+
